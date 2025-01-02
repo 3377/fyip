@@ -1,0 +1,184 @@
+/* 覆盖 Bootstrap 默认变量 */
+:root {
+    --bs-body-font-family: "DingTalk JinBuTi", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+    --bs-body-bg: #f0f5f9;
+    --bs-body-color: #212529;
+    --bs-body-font-weight: 400;
+}
+
+/* 重置基础样式 */
+* {
+    -webkit-text-size-adjust: 100% !important;
+}
+
+body {
+    background-color: #f0f5f9;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.1" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "DingTalk JinBuTi", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 800px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 12px 18px;
+}
+
+.card-body {
+    padding: 0 15px !important;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 15px !important;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.05rem;
+    margin: 0 !important;
+    align-items: center;
+    min-height: 40px;
+}
+
+.info-row:first-child {
+    padding-top: 6px !important;
+    margin-top: 0 !important;
+}
+
+.info-row:last-child {
+    padding-bottom: 6px !important;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+}
+
+.info-row:hover {
+    background-color: #f8f9fa;
+}
+
+.info-label {
+    font-weight: 400;
+    color: #495057;
+    margin-right: 15px;
+    flex-shrink: 0;
+    text-align: left;
+    min-width: 80px;
+}
+
+.info-value {
+    color: #6c757d;
+    font-weight: 400;
+    text-align: right;
+    flex-shrink: 0;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.info-value[id^="location_"] {
+    max-width: 75%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.loading {
+    text-align: center;
+    padding: 0 20px;
+    color: #6c757d;
+}
+
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+
+.copyable-value {
+    cursor: pointer;
+    position: relative;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.copyable-value:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.copy-tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: none;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .info-row {
+        font-size: 0.85rem;
+        padding: 8px 15px !important;
+        flex-wrap: wrap;
+    }
+
+    .info-value {
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-all;
+        text-align: left;
+        margin-top: 4px;
+    }
+
+    .info-value[id^="location_"] {
+        max-width: 100%;
+    }
+
+    .info-label {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+
+    .copy-tooltip {
+        top: auto;
+        bottom: 100%;
+        left: 50% !important;
+        transform: translateX(-50%);
+        margin-bottom: 5px;
+    }
+}
