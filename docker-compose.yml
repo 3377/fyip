@@ -11,7 +11,7 @@ services:
       - "5000:5000"
     environment:
       - TZ=Asia/Shanghai
-      - TENCENT_MAP_KEY=${TENCENT_MAP_KEY:-LQOBZ-LCOWV-T3JPC-UQLNL-FQL7J-KEB3V}
+      - TENCENT_MAP_KEY=${TENCENT_MAP_KEY:-腾讯地图key}
       - ALLOWED_DOMAINS=${ALLOWED_DOMAINS:-*}
       - ALLOWED_IPS=${ALLOWED_IPS:-127.0.0.1,172.17.0.1,localhost}
       - DAILY_LIMIT=${DAILY_LIMIT:-5}
