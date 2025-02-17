@@ -139,7 +139,7 @@ async def get_ip_info_async(ip):
                 })
 
             # 2. 获取经纬度信息
-            meituan_ip_data = await fetch(session, f'https://apimobile.meituan.com/locate/v2/ip/loc?ip={ip}')
+            meituan_ip_data = await fetch(session, f'https://apimobile.meituan.com/locate/v2/ip/loc?client_source=yourAppKey&rgeo=true&ip={ip}')
             if meituan_ip_data and meituan_ip_data.get('data'):
                 mt_data = meituan_ip_data['data']
                 lat = str(mt_data.get('lat', ''))
