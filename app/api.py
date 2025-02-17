@@ -71,7 +71,7 @@ async def get_maxmind_info(session, ip):
     """从MaxMind API获取基础IP信息"""
     try:
         async with async_timeout.timeout(5):
-            async with session.get(f'https://hstz-fyip.hf.space/{ip}') as response:
+            async with session.get(f'https://drfy-ip.hf.space/{ip}') as response:
                 if response.status == 200:
                     return await response.json()
     except Exception as e:
@@ -87,7 +87,7 @@ async def get_public_ip(session):
             return response.get('ip')
 
         # 备用IP获取服务
-        backup_response = await fetch(session, 'https://hstz-api.hf.space')
+        backup_response = await fetch(session, 'https://drfy-ip.hf.space')
         if backup_response and backup_response.get('ip'):
             return backup_response.get('ip')
     except Exception as e:
